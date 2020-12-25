@@ -11,7 +11,8 @@ class CreateUsersService {
   public async execute({ name, email, password }: RequestDTO): Promise<User> {
     const usersRepository = getRepository(User);
 
-    const checkUserExist = usersRepository.findOne({ where: email });
+    const checkUserExist = await usersRepository.findOne({ where: { email } });
+
     if (checkUserExist) {
       throw new Error('Email already used');
     }
