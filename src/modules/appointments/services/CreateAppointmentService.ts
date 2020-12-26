@@ -1,12 +1,13 @@
 import { startOfHour } from 'date-fns';
-import Appointment from '@modules/appointments/infra/typeorm/entities/Appointments';
 import AppError from '@shared/errors/AppError';
+import Appointment from '@modules/appointments/infra/typeorm/entities/Appointments';
 import IAppointmentsRepository from '../repositories/IAppointmentsRepository';
 
 interface IRequestDTO {
   provider_id: string;
   date: Date;
 }
+
 class CreateAppointmentService {
   constructor(private appointmentsRepository: IAppointmentsRepository) {}
 
