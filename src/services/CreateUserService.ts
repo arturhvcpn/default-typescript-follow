@@ -9,7 +9,7 @@ interface RequestDTO {
   password: string;
 }
 
-class CreateUsersService {
+class CreateUserService {
   public async execute({ name, email, password }: RequestDTO): Promise<User> {
     const usersRepository = getRepository(User);
 
@@ -33,4 +33,4 @@ class CreateUsersService {
   }
 }
 
-export default CreateUsersService;
+export default CreateUserService;
