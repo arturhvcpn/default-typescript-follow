@@ -2,7 +2,7 @@ import { getRepository } from 'typeorm';
 import { compare } from 'bcryptjs';
 import { sign } from 'jsonwebtoken';
 import authConfig from '../../../config/auth';
-import User from '../entities/User';
+import User from '../infra/typeorm/entities/User';
 import AppError from '../../../shared/errors/AppError';
 
 interface RequestDTO {
