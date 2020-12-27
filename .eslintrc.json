@@ -28,10 +28,22 @@
       ],
       "prettier/prettier": "error",
       "class-methods-use-this":"off",
-      "@typescript-eslint/camelcase": "off",
-      "@typescript-eslint/no-unused-vars":["error",{
+      "camelcase": "off",
+      "@typescript-eslint/no-unused-vars":["warn",{
         "argsIgnorePattern":"_"
-      }]
+      }],
+      "@typescript-eslint/naming-convention": [
+        "error",
+        {
+          "selector": "interface",
+          "format": ["PascalCase"],
+          "custom": {
+            "regex": "^I[A-Z]",
+            "match": true
+          }
+        }
+      ],
+      "no-useless-constructor":"off"
     },
     "settings": {
       "import/resolver": {
