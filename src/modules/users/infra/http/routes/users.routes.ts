@@ -4,7 +4,6 @@ import { container } from 'tsyringe';
 import ensureAuthenticated from '@modules/users/infra/http/middleware/ensureAuthenticated';
 import CreateUserService from '@modules/users/services/CreateUserService';
 import UpdateUserAvatarService from '@modules/users/services/UpdateUserAvatarService';
-import UsersRepository from '@modules/users/infra/typeorm/repositories/UsersRepository';
 import uploadConfig from '@config/upload';
 
 const usersRouter = Router();
